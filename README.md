@@ -92,15 +92,29 @@ Now, I am going to install AD DS onto my server, change my server from a Workgro
 
 <img src="https://i.imgur.com/5k1qfVL.png" height="60%" width="60%" alt="Server Manager Roles and Features">
 
-4. 
+4. The Before you begin tab is an informative tab that explains the Add Roles and Features Wizard. Click Next.
+5. The Installation Type tab will allow me to select the type of installation I want. Since, this will be the first domain for my company, I will be choosing a role-based installation.
+6. The Server Selection tab will let me choose my server to install roles and features to. I highlighted my computer and hit next.
+7. The Server Roles tab shows all the roles you can install to the server. I will flag the Active Directory Domain Services option. Flagging the role will action a pop-up that will show me all the required features/tools that will be install with AD DS. Press add features and next.
+8. I am ignoring the Features tab for now since I am solely demonstrating Active Directory. Press next.
+9. An AD DS tab will pop up to show best practice information. Press next.
+10. The Confirmation tab will show the roles and features that will be installed. Press install to begin the installation. and let the process finish. I will have to restart my VM once installation is complete.
+11. Once my system was booted up, it is not time to promote the server to a domain controller. Previously it was set as a workgroup. There is a task within my notifications that will display a wizard to help me set this up.
 
-Adding Server Roles and Features
+<img src="https://i.imgur.com/MnBYycM.png" height="60%" width="60%" alt="Post-Deploy Config">
 
-Active Directory Users and Computers
- - Path Breakdown
- - Computers
- - Users
- - Organization Units
+12. Now that the Deployment Configuration is displayed, I am going to flag the option to addd a new forest. This will allow me to set up a our domain controller in a new domain.  There are two other options:
+- Add a domain controller to an existing domain. This will make the forest fault tolerant.
+- Add a new domain to an existing forest.
+- Note: both these options were not chosen due to the fact that I am setting everything up from scratch. Ground zero!
+13. I am now able to name the Root Domain. For this, I coined the name to be rock.local.
 
-Setting up Shared Data and Folders
+<img src="https://i.imgur.com/JX54PKZ.png" height="60%" width="60%" alt="Deployment Configuration">
+
+14. I pretty much keep everything default tabbing through the different sections. Everything was kept to default cause I did not need to change anything besides setting a DSRM password and a NetBIOS domain name(ROCK). A DSRM password is what is used to log into the Restore Mode in case the need for emergency fixes such as some system malfunction and needing to restore for a backup.
+15. Once again, the system will reboot. I am now up and running. We now have the AD DS role as well as my local server now says "Domain: rock.local" instead of "Workgroup: workgroup".
+
+<img src="https://i.imgur.com/CCwCKyC.png" height="60%" width="60%" alt="Post Configuration">
+
+<h4>And there you have it! We have installed Windows Server 2022 OS into a virtual machine and successfully set up Active Directory. I will be cutting this section of the Active Directory lab short. I will dive deeper into the organization units and group policy realm in the next lab. That will be documented in a separate portfolio item! If there is anything I can improve on, please let me know. I am always open to feedback. Thank you!!!!</h4>
 
