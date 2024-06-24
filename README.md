@@ -41,7 +41,7 @@ A workgroup is a logical network more suited for the home environment. Each devi
 A domain is a logical network that is suited for companies that have plenty of employees onboard. This allows for admins who maintain the domain controller to register users and computers to the server. Once a user has there login credentials and permissions set, they will be able to log into any computer within that domain that is within their privilege to log in to. Those users and computers can then be further organized into what are called organizational units(OU). For example, there can be an OU for different offices named "California" and "Washington". Within those OUs can be sub-OUs for the Finance team and the Sales team for each California and Washington respectively and so on. I can then apply group policies to these OUs and set them up in a way where the Sales team only has access to Sales data and the Finance team can only access Finance data. 
 This is a very broad description of what a domain is as what an admin can do within domain can be very complex. Domains essentially give admins an easier time when trying to organize users and devices for large companies.
 
-<h3>Domain Controller Prep</h3>
+<h3>Server Preparation</h3>
 
 To quickly brief, a domain controller is  essentially the domain. And furthermore are servers. These terms may be used synonymously within this demo and in the real world as well.
 
@@ -79,9 +79,20 @@ To set this up, follow these steps:
 
 <img src="https://i.imgur.com/axxrJAH.png" height="60%" width="60%" alt="IPv4 Settings Page">
 
+I am pretty done on the data setup side of things for this computer. Next, I get into the Server Manager and install AD DS. 
 
-- Creating a new Forest + other options
+<h3>Server Manager: AD DS Installation</h3>
+Now, I am going to install AD DS onto my server, change my server from a Workgroup configuration to a Domain Configuration, and finally dive into AD DS itself and utilize Organizational Units.
 
+1. Open Server Manager.
+   - A few things you will notice is that the server is est up as a workgroup. I will change this in a second.
+   - The computer name is how I set it up to be.
+2. Click Manage at the top right.
+3. Select Add Roles and Features.
+
+<img src="https://i.imgur.com/5k1qfVL.png" height="60%" width="60%" alt="Server Manager Roles and Features">
+
+4. 
 
 Adding Server Roles and Features
 
