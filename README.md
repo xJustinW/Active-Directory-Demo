@@ -36,18 +36,18 @@ I will be demonstrating the setup for both Windows Server 2022 in a virtual box 
 <h2>Server Machine Setup</h2>
 <h3>Workgroup vs. Domain</h3>
 
-A workgroup is a logical network more suited for the home environment. Each device is independently configured to a sole user and cannot be seemlessly transfered from one device to the next. The only connection each device has in the workgroup is the network all of them are connected too. This is ideal for the home environment where the family have individual devices such as computers and each computer is uniquely configured to a different person in that household.
+A workgroup is a logical network more suited for the home environment. Each device is independently configured to a sole user and cannot be seemlessly transfered from one device to the next. The only connection each device has in the workgroup is the network all of them are connected too. This is ideal for the home environment where the family has individual devices such as computers that are uniquely configured to a different person in that household.
 
-A domain is a logical network that is suited for companies that have plenty of employees onboard. This allows for admins who maintain the domain controller to register users and computers to the server. Once a user has there login credentials and permissions set, they will be able to log into any computer within that domain that is within their privilege to log in to. Those users and computers can then be further organized into what are called organizational units(OU). For example, there can be an OU for different offices named "California" and "Washington". Within those OUs can be sub-OUs for the Finance team and the Sales team for each California and Washington respectively and so on. I can then apply group policies to these OUs and set them up in a way where the Sales team only has access to Sales data and the Finance team can only access Finance data. 
+A domain is a logical network that is suited for companies that have plenty of employees onboard. This allows for admins who maintain the domain controller to register users and computers to the server. Once a user has there login credentials and permissions set, they will be able to log into any computer within that domain that is within their privilege to log in to. Those users and computers can then be further organized into what are called organizational units(OU). For example, there can be an OU for different offices named "California" and "Washington". Within those OUs can be sub-OUs for the Finance team and the Sales team for both California and Washington respectively and so on. I can then apply group policies to these OUs and set them up in a way where the Sales team only has access to Sales data and the Finance team can only access Finance data. 
 This is a very broad description of what a domain is as what an admin can do within domain can be very complex. Domains essentially give admins an easier time when trying to organize users and devices for large companies.
 
 <h3>Server Preparation</h3>
 
-To quickly brief, a domain controller is  essentially the domain. And furthermore are servers. These terms may be used synonymously within this demo and in the real world as well.
+To quickly brief, a domain controller is  essentially the domain. And furthermore can be/are servers. These terms may be used synonymously within this demo and in the real world as well.
 
 <h4>First things first. Set a Computer Name!</h4>
 
-This is important because computers come with a default name that may not be too user-freindly. I want to set my server to an easy-to-remember name that also defines the entity of what the server is for. To do so, follow these steps: (Naming conventions and organization practices vary throught the professional landscape. The name I use may not be professionaly accurate but will work for this demo.)
+This is important because computers come with a default name that may not be too user-freindly. I want to set my server with an easy-to-remember name that also refers to the company name. To do so, follow these steps: (Naming conventions and organization practices vary throughout the professional landscape. The name I use may not be professionaly accurate but will work for this demo.)
  1. Navigate to the Settings App.
  2. Select the System path.
  3. Navigate to the About Tab.
